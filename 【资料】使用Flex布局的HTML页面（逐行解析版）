@@ -1,0 +1,275 @@
+<!-- 文档类型 html -->
+<!DOCTYPE html>
+<!-- 语言=zn-英文 -->
+<html lang="en-US">
+  <!-- <头> -->
+  <head>
+    <!-- <元 字符集=“UTF-8” />-->
+    <meta charset="utf-8" />
+    <!-- <元 名称 ="视窗" 内容="宽度=设备-宽度"-->
+    <meta name="viewport" content="width=device-width" />
+    <!-- <标题>我的第一个 HTML 页面</标题> -->
+    <title>Complex flexbox example</title>
+    <!-- <风格> -->
+    <style>
+      /* HTML {
+        文本-家族:Arial（一种字体）,无衬线字体;
+      } */
+      html {
+        font-family: sans-serif;
+      }
+
+      /* 身体 {
+        外边距: 0;
+      } */
+      body {
+        margin: 0;
+      }
+
+      /* 页眉{
+        背景颜色: 紫色;
+        高度: 100px;
+      } */
+      header {
+        background: purple;
+        height: 100px;
+      }
+
+      /* h1标题格式 {
+        文本对齐: center;
+        颜色: 白色;
+        线高: 100px;
+        外边距: 0;
+      } */
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+
+      /* 文章 {
+        内边距: 10px;
+        外边距: 10px;
+        背景颜色: aqua;
+      } */
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+      }
+
+      /* 部分 {
+        展示: flex布局;
+      } */
+      section {
+        display: flex;
+      }
+
+      /* 文章 {
+        flex基础属性: 放大比例/缩小比例=1 flex主轴空间大小=200px;
+      } */
+      article {
+        flex: 1 200px;
+      }
+
+      /* 文章：同类型第三个元素 {
+        flex基础属性: 放大比例/缩小比例=3 flex主轴空间大小=200px;
+        展示: flex布局;
+        flex-flow: 方向=纵向 换行方式=默认（不换行）;
+      } */
+      article:nth-of-type(3) {
+        flex: 3 200px;
+        display: flex;
+        flex-flow: column;
+      }
+
+      /* 文章:同类型第三个元素 分界:第一个子元素 {
+        flex基础属性: 放大比例/缩小比例=1 flex主轴空间大小=200px;
+        展示: flex布局;
+        flex-flow: 方向=横向 换行方式=不换行;
+        交叉轴对齐: center;
+        主轴对齐: space-around;
+      } */
+      article:nth-of-type(3) div:first-child {
+        flex: 1 100px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      /* 按钮 {
+        lex基础属性: 放大比例/缩小比例=1 flex主轴空间大小=auto;
+        外边框: 5px;
+        字号: 18px;
+        线高: 1.5;
+      } */
+      button {
+        flex: 1 auto;
+        margin: 5px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+
+  <!-- <身体> -->
+  <body>
+    <!-- <页眉> -->
+    <header>
+      <!-- <h1标题格式>Complex flexbox example</h1标题格式> -->
+      <h1>Complex flexbox example</h1>
+    </header>
+
+    <!-- <部分 -->
+    <section>
+      <!-- <文章> -->
+      <article>
+        <!-- <h2标题格式>……</h2标题格式> -->
+        <h2>First article</h2>
+        <!-- <段落>… -->
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+        <!-- </段落> -->
+      </article>
+      <!-- </文章> -->
+
+      <!-- <文章> -->
+      <article>
+        <!-- <h2标题格式>……</h2标题格式> -->
+        <h2>Second article</h2>
+        <!-- <段落>… -->
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+        <!-- </段落> -->
+      </article>
+      <!-- </文章> -->
+
+      <!-- <文章> -->
+      <article>
+        <!-- <分界> -->
+        <div>
+          <button>Smile</button>
+          <button>Laugh</button>
+          <button>Wink</button>
+          <button>Shrug</button>
+          <button>Blush</button>
+          <!-- </分界> -->
+        </div>
+
+        <!-- <分界> -->
+        <div>
+          <p>
+            Tacos actually microdosing, pour-over semiotics banjo chicharrones
+            retro fanny pack portland everyday carry vinyl typewriter. Tacos
+            PBR&B pork belly, everyday carry ennui pickled sriracha normcore
+            hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed
+            trust fund twee, leggings salvia iPhone photo booth health goth
+            gastropub hammock.
+          </p>
+          <!-- </分界> -->
+        </div>
+        <!-- <分界> -->
+        <div>
+          <p>
+            Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat
+            ennui. Organic small batch paleo 8-bit. Intelligentsia umami
+            wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings
+            cold-pressed squid chartreuse put a bird on it. Listicle pickled man
+            bun cornhole heirloom art party.
+          </p>
+          <!-- </分界> -->
+        </div>
+        <!-- </文章> -->
+      </article>
+
+      <!-- </部分> -->
+    </section>
+    <!-- </身体> -->
+  </body>
+</html>
+
+<!-- 文档类型 html -->
+<!-- 语言=zn-英文 -->
+<!-- <头> -->
+<!-- <元 字符集=“UTF-8” />-->
+<!-- <元 名称 ="视窗" 内容="宽度=设备-宽度"-->
+<!-- <标题>我的第一个 HTML 页面</标题> -->
+<!-- <风格> -->
+
+/* HTML { 文本-家族:Arial（一种字体）,无衬线字体; } */ /* 身体 { 外边距: 0; } */
+/* 页眉{ 背景颜色: 紫色; 高度: 100px; } */ /* h1标题格式 { 文本对齐: center;
+颜色: 白色; 线高: 100px; 外边距: 0; } */ /* 文章 { 内边距: 10px; 外边距: 10px;
+背景颜色: aqua; } */ /* 部分 { 展示: flex布局; } */ /* 文章 { flex基础属性:
+放大比例/缩小比例=1 flex主轴空间大小=200px; } */ /* 文章：同类型第三个元素 {
+flex基础属性: 放大比例/缩小比例=3 flex主轴空间大小=200px; 展示: flex布局;
+flex-flow: 方向=纵向 换行方式=默认（不换行）; } */ /* 文章:同类型第三个元素
+分界:第一个子元素 { flex基础属性: 放大比例/缩小比例=1 flex主轴空间大小=200px;
+展示: flex布局; flex-flow: 方向=横向 换行方式=不换行; 交叉轴对齐: center;
+主轴对齐: space-around; } */ /* 按钮 { lex基础属性: 放大比例/缩小比例=1
+flex主轴空间大小=auto; 外边框: 5px; 字号: 18px; 线高: 1.5; } */
+
+<!-- </风格> -->
+<!-- </头> -->
+
+<!-- <身体> -->
+<!-- <页眉> -->
+<!-- <h1标题格式>Complex flexbox example</h1标题格式> -->
+<!-- </页眉> -->
+
+<!-- <部分 -->
+<!-- <文章> -->
+<!-- <h2标题格式>……</h2标题格式> -->
+<!-- <段落>… -->
+*
+<!-- </段落> -->
+<!-- </文章> -->
+
+<!-- <文章> -->
+<!-- <h2标题格式>……</h2标题格式> -->
+<!-- <段落>… -->
+*
+<!-- </段落> -->
+<!-- </文章> -->
+
+<!-- <文章> -->
+<!-- <分界> -->
+<!-- <按钮>……</按钮> -->
+<!-- <按钮>……</按钮> -->
+<!-- <按钮>……</按钮> -->
+<!-- <按钮>……</按钮> -->
+<!-- <按钮>……</按钮> -->
+<!-- </分界> -->
+
+<!-- <分界> -->
+<!-- <段落>… -->
+*
+<!-- </段落> -->
+<!-- </分界> -->
+
+<!-- <分界> -->
+<!-- <段落>… -->
+*
+<!-- </段落> -->
+<!-- </分界> -->
+
+<!-- </文章> -->
+
+<!-- </部分> -->
+
+<!-- </身体> -->
+
+<!-- </html> -->
