@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Day2 - CSS 基础</title>
+
+    <!-- <风格> -->
+    <style>
+      /* 元素选择器:选中所有指定HTML元素 即选中一整个<title>或<li>(所有选项)或<p>（所有段落） */
+      /* 身体 */
+      body {
+        /* 文本-家族:Arial（一种字体）,无衬线字体 */
+        font-family: Arial, sans-serif;
+        /* 背景-颜色: #f0f0f0； */
+        background-color: #f0f0f0;
+        /* 外边框：0； */
+        margin: 0;
+        /* 内边框：20px；（页面上下左右正方形边框） */
+        padding: 20px;
+      }
+
+      /* 类选择器：选中所有指定 class（类） 的元素 可自己零散分类选择 class可以有多个元素组成 （小） */
+      /* 标题 */
+      .title {
+        /* 颜色: #333； */
+        color: #333;
+        /* 文本对齐：居中； */
+        text-align: center;
+        /* 边框-底部: 2px solid #666；（底部线条颜色） */
+        border-bottom: 2px solid #666;
+        /* 内边距-底部：10px；（底部线条与标题文字距离） */
+        padding-bottom: 10px;
+      }
+
+      /* ID 选择器：选中唯一指定 id 的元素 给一个ID的所有内容选中 一个元素只能有一个ID （中） */
+      /* 主要-内容 */
+      #main-content {
+        /* 背景颜色 */
+        background-color: white;
+        /* 内边距 */
+        padding: 20px;
+        /* 边框- */
+        border-radius: 8px;
+        /* 外边距-顶部 */
+        margin-top: 20px;
+      }
+
+      /* 后代选择器：选中嵌套在父元素内的子元素 */
+      /* #主要-内容 */
+      #main-content p {
+        /* 线-高 */
+        line-height: 1.6;
+        /* 颜色*/
+        color: #666;
+      }
+
+      /* 盒模型示例 */
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: #ff9999;
+        margin: 20px auto; /* 上下边距20px，左右居中 */
+        padding: 15px;
+        border: 3px solid #ff6666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <标题格式1 类型=“标题”>CSS 学习示例</标题格式2> -->
+    <h1 class="title">CSS 学习示例</h1>
+
+    <!-- <划分 名称=“主要内容”> -->
+    <div id="main-content">
+      <!-- <段落>这是一个段落，演示文本样式和行高。</段落> -->
+      <p>这是一个段落，演示文本样式和行高。</p>
+      <!-- <划分 类型=“盒型”> -->
+      <div class="box">
+        <!-- <段落>这是一个盒模型示例，注意边距和边框。</段落> -->
+        <p>这是一个盒模型示例，注意边距和边框。</p>
+        <!-- </划分> -->
+      </div>
+      <!-- </划分> -->
+    </div>
+  </body>
+</html>
