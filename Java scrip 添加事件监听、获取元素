@@ -1,0 +1,111 @@
+//1【document.getElementById】+【addEventListener】
+
+/*
+<输入框 类型=“文本” ID=“我的输入” 占位符=“输入内容”>
+<按钮 ID=“我的按钮”>修改内容</按钮>
+*/
+<input type="text" id="input" placeholder="输入内容" />
+<button id="myButton">修改内容</button>
+
+//<脚本>
+<script>
+//「我的按钮。添加事件监听：功能（我的输入。赋值=内容已更新）」
+  /* 
+  【文档.通过ID获得元素】（“我的按钮”）.【添加事件监听】（“点击”，【功能】（）{
+    【文档.通过ID获得元素】（“我的输入”）.【赋值】=“内容已更新！”；
+  });
+  */
+  document.getElementById("myButton").addEventListener("click", function () {
+    document.getElementById("myInput").value = "内容已更新！";
+  });
+//</脚本>
+</script>
+
+//2【document/button.addEventListener】+【document.querySelectorAll】
+
+<body>
+  //<按钮>Click me</按钮>
+  <button>Click me</button>
+  
+//「增加事件监听：功能（增加段落） 常量 段落=创建元素p 文本内容="你点击了按钮！"」
+  <script>
+    /*
+    【文档.添加事件监听】（“DOMContentLoaded”）, () => {
+       【功能】 增加段落（）{
+         【常量】 段=文档.创建元素（“p”）
+         【段.文本内容】 = “你点击了按钮！”；
+         【文档】.body.app结束孩子（段）
+          }
+      */
+    document.addEventListener("DOMContentLoaded", () => {
+      function createParagraph() {
+         const para = document.createElement("p");
+         para.textContent = "你点击了按钮！";
+         document.body.appendChild(para);
+       }
+    </script>
+</body>
+
+//3【document.getElementById】
+<body>
+
+    /*
+    <p ID=“段”>这里有一些文本</p>
+    <按钮 单击=“改变颜色（‘蓝色’）;">蓝色</按钮>
+    <按钮 单击=“改变颜色（‘红色’）;">红色</按钮>
+    */
+    <p id="para">这里有一些文本</p>
+    <button onclick="changeColor('blue');">蓝色</button>
+    <button onclick="changeColor('red');">红色</button>
+//「功能：改变颜色 常量 元素=段 元素。风格。颜色=新颜色」
+    /*
+    【功能】 改变颜色(新颜色) {
+        【常量】 元素 = 文档.通过ID获取元素("段");
+        元素.风格.颜色 = 新颜色;
+      }
+    */
+    <script>
+      function changeColor(newColor) {
+        const elem = document.getElementById("para");
+        elem.style.color = newColor;
+      }
+    </script>
+  </body>
+
+//4【document.body.innerHTML】
+<body>
+
+  /*
+  <段>A paragraph</段>
+  */
+  <p>A paragraph</p>
+  <div>A div</div>
+
+//
+  /*
+    提示(文档.body.内部的HTML); 
+    文档.body.内部的HTML = "The new BODY!";
+  */
+  <script>
+    alert(document.body.innerHTML); // 读取当前内容
+    document.body.innerHTML = "The new BODY!"; // 替换它
+  </script>
+
+//5【elem1.innerHTML】+【elem2.textContent】
+</body>
+
+<div id="elem1"></div>
+<div id="elem2"></div>
+
+/*
+让 名字 = 提示("名字是什么?", "<加粗>Winnie-the-Pooh!</加粗>");
+  元素1.内部的HTML = 名字;
+  元素2.文本内容 = 名字;
+*/
+<script>
+  let name = prompt("What's your name?", "<b>Winnie-the-Pooh!</b>");
+  //第一个<div>获取name作为HTML
+  elem1.innerHTML = name;
+  //第二个<div>获取name作为文本
+  elem2.textContent = name;
+</script>
